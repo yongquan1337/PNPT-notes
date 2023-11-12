@@ -56,3 +56,7 @@ Gmail checks if user exists. use password recovery to find if the account is tie
 2. go to hunter.io/phonebook.cz and identify the formatting of email and try to guesstimate their email
 3. Verify Email using emailhippo/emailchecker
 
+
+https://breachdirectory.org/
+https://search.0t.rocks/
+# Gathering Breached Credentials with Breach-Parse
