@@ -60,3 +60,19 @@ Gmail checks if user exists. use password recovery to find if the account is tie
 https://breachdirectory.org/
 https://search.0t.rocks/
 # Gathering Breached Credentials with Breach-Parse
+
+# hunting subdomains
+
+- sublist3r
+- crt.sh
+  ![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/c36dbedb-d3f5-4864-bb67-80c6bd2e3be1)
+- amass
+
+# identify web tech
+
+- builtwith.com
+- wappalyzer (firefox extention)
+- whatweb
+- 
+
+
