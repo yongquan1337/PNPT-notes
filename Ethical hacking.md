@@ -67,12 +67,19 @@ https://search.0t.rocks/
 - crt.sh
   ![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/c36dbedb-d3f5-4864-bb67-80c6bd2e3be1)
 - amass
+- burpsuite
 
 # identify web tech
 
 - builtwith.com
 - wappalyzer (firefox extention)
 - whatweb
-- 
+
+# Google fu (googling using syntax)
+
+https://ahrefs.com/blog/google-advanced-search-operators/
+
+
+
 
 
