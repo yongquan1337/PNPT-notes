@@ -79,6 +79,17 @@ https://search.0t.rocks/
 
 https://ahrefs.com/blog/google-advanced-search-operators/
 
+# kioptrix
+
+user
+john
+TwoCows2
+
+arp-scan -l
+nmap -T4 -p- -A 192.168.79.24
+
+nikto -h 192.168.79.24
+gobuster dir -w /wordlist.txt -u http://192.168.79.24
 
 
 
