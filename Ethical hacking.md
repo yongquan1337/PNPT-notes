@@ -91,6 +91,22 @@ nmap -T4 -p- -A 192.168.79.24
 nikto -h 192.168.79.24
 gobuster dir -w /wordlist.txt -u http://192.168.79.24
 
+###on kali add to /etc/samba/smbd.conf
+[global]
+client min protocol = CORE﻿
+client max protocol = SMB3﻿﻿
+
+\#systemctl restart smbd.service
+
+## test smb
+
+smbclient -L \\\\192.168.79.24\\
+smbclient \\\\192.168.79.24\\ADMIN$
+smbclient \\\\192.168.79.24\\IPC$
 
 
+## ssh
+ssh 192.168.79.24
 
+if too old version then
+ssh 192.168.79.24 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc
