@@ -110,3 +110,14 @@ ssh 192.168.79.24
 
 if too old version then
 ssh 192.168.79.24 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc
+
+# reverse shell
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/ffdaf0be-f722-46f8-97a6-dac9f5f1bfde)
+
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/557b15fe-e68b-451e-af8d-d207547adb79)
+reverse is preferred
+
+# staged vs non staged payloads
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/0c3bed1d-2187-4824-ad66-a9ca0fd8cb88)
+staged and non staged marked by the "/" in the payload path
+if staged doesnt work, try a non staged
