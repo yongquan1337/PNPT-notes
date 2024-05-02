@@ -121,3 +121,14 @@ reverse is preferred
 ![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/0c3bed1d-2187-4824-ad66-a9ca0fd8cb88)
 staged and non staged marked by the "/" in the payload path
 if staged doesnt work, try a non staged
+
+
+## Blue VM
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/03bf6bfa-0d5b-4581-a949-7d63228eb961)
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/f94ae98a-4b61-4d51-ac6c-7aa84023c387)
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/5cd346f7-4deb-4c4a-ace6-3164467fdf34)
+![image](https://github.com/yongquan1337/PNPT-notes/assets/65943569/ce4a34c9-f827-4553-8d1e-430401e171dc)
+
+
+
+
