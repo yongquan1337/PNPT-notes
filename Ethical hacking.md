@@ -140,21 +140,38 @@ if staged doesnt work, try a non staged
 ![image](https://github.com/user-attachments/assets/43dea204-6ebf-46ec-b3f8-95fb25ff35bc)
 ![image](https://github.com/user-attachments/assets/c80302c8-431b-4367-aec4-547530187642)
 ![image](https://github.com/user-attachments/assets/8c4a2762-3ed2-40ed-9b0d-ec72a2728058)
+![image](https://github.com/user-attachments/assets/ea878a07-c091-4783-8405-0794b6ed125a)
+download pentestmonkey reversephpshell
 ![image](https://github.com/user-attachments/assets/cee21607-c3ce-46ef-903d-80f45bff44f1)
+
 ![image](https://github.com/user-attachments/assets/f2a8f0d7-45bd-4a7d-a27b-0f152cadd19b)
+
 ![image](https://github.com/user-attachments/assets/8ae8d330-1c8a-4892-adb5-545f2f73a79d)
+
 ![image](https://github.com/user-attachments/assets/dc05e11c-1b82-4e11-8290-600b32f62a80)
+
 ![image](https://github.com/user-attachments/assets/7eaf80da-73d3-4129-98a2-b941874c67c1)
+
 ![image](https://github.com/user-attachments/assets/7521dd15-4558-4920-ae9d-f7bcf8945bec)
+
 ![image](https://github.com/user-attachments/assets/a249172c-f81b-4a60-b34f-181761e992e5)
+
 ![image](https://github.com/user-attachments/assets/d2f0cee1-0055-4734-ba89-b245a853a2e9)
+
 ![image](https://github.com/user-attachments/assets/72513980-0f5a-481e-97f4-530e2fbb55d6)
+
 ![image](https://github.com/user-attachments/assets/589b4de9-d750-4ffc-a6b1-1cf84d452057)
+
 ![image](https://github.com/user-attachments/assets/080e0cd3-e164-45d1-be1e-2cdbbfc0a7ea)
+
 ![image](https://github.com/user-attachments/assets/a1593235-12d7-414a-9e2b-3182c0772b6d)
+
 ![image](https://github.com/user-attachments/assets/1808941f-5b6a-4988-ab68-888fc4251428)
+
 ![image](https://github.com/user-attachments/assets/c826b541-983b-4343-adf5-77ce549f4da3)
+
 ![image](https://github.com/user-attachments/assets/47331558-47ab-4308-858f-d720ce75ed82)
+
 ![image](https://github.com/user-attachments/assets/24c7b221-8dde-4020-9989-afb8bf75242d)
 
 
