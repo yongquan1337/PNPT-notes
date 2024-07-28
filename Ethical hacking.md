@@ -133,6 +133,7 @@ if staged doesnt work, try a non staged
 ## Academy
 ![image](https://github.com/user-attachments/assets/38a42a28-b060-4588-b1df-d227dabde110)
 ![image](https://github.com/user-attachments/assets/c474fa1b-debc-49da-a077-599591f5af4c)
+
 ![image](https://github.com/user-attachments/assets/0f24c288-9d97-4e73-9707-0b0e63b02546)
 ![image](https://github.com/user-attachments/assets/3ab4c257-6516-4607-809c-94c3c3f6171b)
 ![image](https://github.com/user-attachments/assets/d7f46e3f-2b26-4fd3-92b4-32da0731ea11)
