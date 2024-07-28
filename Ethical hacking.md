@@ -162,7 +162,7 @@ download pentestmonkey reversephpshell
 
 ![image](https://github.com/user-attachments/assets/589b4de9-d750-4ffc-a6b1-1cf84d452057)
 
-![image](https://github.com/user-attachments/assets/080e0cd3-e164-45d1-be1e-2cdbbfc0a7ea)
+![image](https://github.com/user-attachments/assets/c319760f-5f44-410d-a5bc-e00bd5e948c2)
 
 ![image](https://github.com/user-attachments/assets/a1593235-12d7-414a-9e2b-3182c0772b6d)
 
