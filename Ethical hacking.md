@@ -171,10 +171,81 @@ download pentestmonkey reversephpshell
 ![image](https://github.com/user-attachments/assets/24c7b221-8dde-4020-9989-afb8bf75242d)
 
 
+## Dev
 
+arp scan to discover vm ip address
+![image](https://github.com/user-attachments/assets/29ac47df-e9b4-40b9-a79e-6c1a9cc0c755)
 
+nmap -t4 -A 192.168.79.20
+important ports are ssh,80,8080, and 2049(nfs network file sharing)
+![image](https://github.com/user-attachments/assets/939f29ea-1de9-48be-bf54-3faa41548164)
 
+incorrect bolt config
+![image](https://github.com/user-attachments/assets/0675263b-70f3-4aa8-be9e-3a553f4309ea)
 
+port 8080 is also on which shows the php info
+![image](https://github.com/user-attachments/assets/b5615a55-e714-40ad-9aaf-4a695c692561)
 
+gobusters finds the directories
+port 80
+![image](https://github.com/user-attachments/assets/a451fca4-57ca-433e-b64f-02ccf4cfed5a)
+port 8080
+![image](https://github.com/user-attachments/assets/6f0852da-4c00-4fb4-a6ce-4d574a00e74b)
 
+after digging the directories (bolt, I_love_java)
+![image](https://github.com/user-attachments/assets/4e7eae38-2eeb-4925-8625-a25eaff4b321)
+
+In /app/config, found config.yml which confirms the credentials
+![image](https://github.com/user-attachments/assets/b5de807b-931c-480f-9d57-73504a4732e3)
+
+nfs mounting
+![image](https://github.com/user-attachments/assets/4d11cf5d-bdff-4cf0-b7db-2a3956c4aee5)
+
+aft apt install fcrackzip (-v verbose, -u unzip, -D dictionary attack, -p dictionary file) 
+![image](https://github.com/user-attachments/assets/819ae07c-9f4b-4bc7-a918-4773f6870daa)
+
+unzips file
+![image](https://github.com/user-attachments/assets/b492f6dd-a376-4b40-997d-51fdf49a721e)
+
+config files, goes by the initial jp
+![image](https://github.com/user-attachments/assets/d67cfadd-f717-4659-a97e-fc4295279a3e)
+
+went to port 8080/dev and goes to a bolt wire site, (bolt and I_love_java did not work, so just create a new account)
+![image](https://github.com/user-attachments/assets/049ea83b-96eb-416a-9b97-91c2258b683d)
+
+boltwire has exploits available
+![image](https://github.com/user-attachments/assets/2d08889a-72a1-4f22-ab1f-d3af557f9217)
+
+able to find user jeanpaul which matches the jp initial
+![image](https://github.com/user-attachments/assets/012a126c-194f-4c9a-8cb1-616a168e82e1)
+
+ssh using the id rsa from the zipped folder, used password I_love_java from above
+![image](https://github.com/user-attachments/assets/2dae9420-773c-4806-9ead-b7bab35a8ed9)
+
+sudo -l to find that /usr/bin/zip runs with sudo
+![image](https://github.com/user-attachments/assets/9e68ac5c-1513-49a5-926a-ab0f1e6c761b)
+
+gtfobins sudo,zip
+![image](https://github.com/user-attachments/assets/73066718-e385-438e-9da6-93e60f8f9c56)
+
+using gtfobins gets a root shell
+![image](https://github.com/user-attachments/assets/2710303a-cf6f-4dad-bad0-2a7e6a8a7961)
+
+flag
+![image](https://github.com/user-attachments/assets/f06e18b9-54c4-41bc-b3fb-59dffb97fcda)
+
+## butler
+
+nmap scan (http ports on 8080 and 5357
+![image](https://github.com/user-attachments/assets/7df2037d-e4f7-4081-b51b-3716be42de77)
+
+go to http://192.168.79.21:8080 (note that https wont work)
+![image](https://github.com/user-attachments/assets/b28c87c2-f299-4f6b-9bc8-96c2344a92e8)
+
+using burpsuite to get the login infos
+![image](https://github.com/user-attachments/assets/c41e4a91-aefb-49f4-b48e-d37c90a3fd5b)
+
+using hydra to crack the passwords. (userlist contains simple users such as admin, jenkins, user.)
+-L userfile -P passwordfile -u(test all users) -f(until 1 is found) 192.168.79.21 -s (PORT) http-post-form "/login:user=^USER^&pass=^PASS^:F(failure condition)='Invalid'"
+![image](https://github.com/user-attachments/assets/c41e4a91-aefb-49f4-b48e-d37c90a3fd5b)
 
