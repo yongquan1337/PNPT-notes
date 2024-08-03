@@ -286,8 +286,45 @@ u have entered in admin
 ![image](https://github.com/user-attachments/assets/2c3f218b-4bda-4277-891e-1d201eb3d2a2)
 
 
+### Blackpearl
 
+nmap scan
+![image](https://github.com/user-attachments/assets/8c04f774-8600-431d-b1a8-c550cf3ee95b)
 
+gobuster found /secret
+![image](https://github.com/user-attachments/assets/7b12c786-410d-4636-9b5b-04a1afb47d15)
 
+Sike
+![image](https://github.com/user-attachments/assets/6e0aa615-06f3-4cf0-81b8-6fa7cdbc89f6)
 
+page source shows
+![image](https://github.com/user-attachments/assets/aa517a24-0c1f-41c3-81b0-06738a32b336)
+
+dnsrecon
+![image](https://github.com/user-attachments/assets/b16bbb3b-9f97-4df5-a5bb-cac788b0d2ab)
+
+edit /etc/hosts
+![image](https://github.com/user-attachments/assets/07993d49-4bc5-427a-9b9d-fe362e20c416)
+
+restart web browser and go to http://blackpearl.tcm
+![image](https://github.com/user-attachments/assets/cfd1e276-8bc6-40a0-8b62-9f4068ebaeeb)
+
+gobuster found /navigate
+![image](https://github.com/user-attachments/assets/47ad00ac-45df-440a-a345-8ec86adf1169)
+
+msfconsole
+![image](https://github.com/user-attachments/assets/43f32b6e-bc8c-41e0-9b5b-9e90eeb8fd68)
+
+meterpreter shell, which python shows python is installed. run python tty shell
+![image](https://github.com/user-attachments/assets/bd19068a-b589-4b26-a659-2ba231d9e5a9)
+
+host ur transfer file and use wget to put linpeas into victim machine.chmod to make it executable
+![image](https://github.com/user-attachments/assets/e1c1b49e-6364-48f5-9de1-06a2899d0dd4)
+
+unknown suid binary? if manually (find / -type f -perm -4000 2>/dev/null)
+![image](https://github.com/user-attachments/assets/ae3a7f80-b011-4969-916a-0246df82baac)
+
+use gtfo bins and search. php is in the list for suid
+![image](https://github.com/user-attachments/assets/0dd16e00-2277-4210-8dcf-8c1220bdd4e8)
+![image](https://github.com/user-attachments/assets/146845d3-56e8-4d85-bac0-61b1389e9d80)
 
