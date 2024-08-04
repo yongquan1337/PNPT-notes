@@ -357,3 +357,7 @@ change network adaptor to use AD as the preffered dns -> windows search access w
 on THEPUNISHER, login to administrator -> edit local users and group -> users -> set password for Administrator (Password1!) -> double click enable
 Group -> administrators -> add fcastle -> okapplyok
 Open files -> network -> enable network file sharing on all vms
+
+on SPIDERMAN do the exact same thing but in group administrators add both pparker and fcastle
+log back in to local user .\peterparker -> folder -> thisPC -> computer -> map network drive -> folder: \\HYDRA-DC\hackme -> connect using different credentials -> verify with administrator
+![image](https://github.com/user-attachments/assets/4cec93bc-b3e6-40a7-b004-ae87c372d330)
