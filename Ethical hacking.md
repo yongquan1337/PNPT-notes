@@ -328,3 +328,24 @@ use gtfo bins and search. php is in the list for suid
 ![image](https://github.com/user-attachments/assets/0dd16e00-2277-4210-8dcf-8c1220bdd4e8)
 ![image](https://github.com/user-attachments/assets/146845d3-56e8-4d85-bac0-61b1389e9d80)
 
+
+### AD setup
+Manage -> roles and features -> rolebased -> ... check AD domain services -> ... promote server to domain controller -> add a new forest (MARVEL.local) ->  install restart
+Manage -> roles and features -> rolebased -> ... check AD certificate services -> ...validity 99 years -> .. reboot
+
+Tools -> AD users and computers -> rightclick the DC -> new OU called group -> move everyt but administrator and guest into group
+rightclick administrator copy -> Tony Stark (tstark) -> password never expire
+repeat for Frank Castle and Peter Parker
+rightclick administrator copy -> SQLService (SQLService) -> password never expire -> add password into description (bad service acc practice)
+
+### shares
+File and Storage services -> shares -> task,new share -> ... share name "hack me" -> ...create
+
+### spn
+cmd administrator -> setspn -a HYDRA-DC/SQLService.MARVEL.local:60111 MARVEL\SQLService
+![image](https://github.com/user-attachments/assets/72605562-a21d-4cea-b8e5-f28628d533a6)
+setspn -T MARVEL.local -Q /*/ (querys)
+![image](https://github.com/user-attachments/assets/07e5b187-b1c6-43be-bf41-72ac54974541)
+
+### AD groups
+Group policy -> rightclick DC -> create a gpo (Disable Windows Defender) -> edit -> administrative templates -> windows component -> microsoft defender antivirus -> options turn off microsoft defender antivirus -> enable,apply,ok -> enforce policy
