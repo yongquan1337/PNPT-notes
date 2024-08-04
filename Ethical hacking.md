@@ -349,3 +349,11 @@ setspn -T MARVEL.local -Q /*/ (querys)
 
 ### AD groups
 Group policy -> rightclick DC -> create a gpo (Disable Windows Defender) -> edit -> administrative templates -> windows component -> microsoft defender antivirus -> options turn off microsoft defender antivirus -> enable,apply,ok -> enforce policy
+
+### AD users
+change network adaptor to use AD as the preffered dns -> windows search access work or school -> connect -> join AD domain -> ... change account type to administrator
+![image](https://github.com/user-attachments/assets/93c7ce91-83e5-4e09-afe5-aca9cc1b9634)
+
+on THEPUNISHER, login to administrator -> edit local users and group -> users -> set password for Administrator (Password1!) -> double click enable
+Group -> administrators -> add fcastle -> okapplyok
+Open files -> network -> enable network file sharing on all vms
